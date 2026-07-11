@@ -64,5 +64,31 @@ public class ProductoService {
             // Lanza una nueva excepción para encapsular el problema de integridad de datos
             throw new IllegalStateException("No se puede eliminar el producto. Tiene datos asociados.", e);
         }
+        
     }
+    // semana #8 - 1
+     @Transactional(readOnly = true)
+    public List<Producto> consultaDerivada(double precioInf, double precioSup) {
+        return productoRepository.findByPrecioBetweenOrderByPrecioAsc(precioInf, precioSup);
+    }
+    // semana #8 - 2
+      @Transactional(readOnly = true)
+    public List<Producto> consultaJPQL(double precioInf, double  precioSup) {
+        return productoRepository.consultaJPQL(precioInf, precioSup);
+    }
+    // semana #8 - 3
+      @Transactional(readOnly = true)
+    public List<Producto> consultaSQL(double precioInf,double precioSup) {
+        return productoRepository.consultaSQL(precioInf, precioSup);
+    }
+   
+   
+    // practica2 6-7-2026
+    @Transactional(readOnly = true)
+    public List<Producto> buscarPorExistencias(Integer existencias) {
+        return productoRepository.buscarPorExistencias(existencias);
+    }
+
+
 }
+

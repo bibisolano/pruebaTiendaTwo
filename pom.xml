@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.tiendatwo</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>tiendatwo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>tiendatwo</name>
     <description>ProyectoTienda</description>
@@ -107,6 +107,14 @@
             <artifactId>firebase-admin</artifactId>
             <version>9.5.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>   
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+        </dependency> 
 
     </dependencies>
         
