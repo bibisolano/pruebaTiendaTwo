@@ -32,7 +32,7 @@
                     <li class="nav-item px-2"><a class="nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>
                     <li class="nav-item px-2"><a class="nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>
 
-                    
+
 
                     <!--semana #8 -->
                     <li class="nav-item px-2"><a class="nav-link" th:href="@{/consultas/listado}">[[#{plantilla.consultas}]]</a></li>                                
@@ -68,9 +68,9 @@
                         </ul>
                     </li>
                 </ul>
-                
-                
-              <!-- semana#9 -->
+
+
+                <!-- semana#9 -->
                 <!--  apartadoo de seguridad y autenticacion -->
                 <ul class="navbar-nav" sec:authorize="!isAuthenticated()"> 
                     <li class="nav-item">
@@ -80,7 +80,7 @@
                         </a>
                     </li>
                 </ul>
-                
+
                 <ul class="navbar-nav" sec:authorize="isAuthenticated()">
                     <li class="nav-item my-auto">
                         <a class="nav-link">

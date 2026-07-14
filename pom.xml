@@ -28,6 +28,8 @@
     </scm>
     <properties>
         <java.version>25</java.version>
+        <maven.compiler.relace>25</maven.compiler.relace>
+        <star-class>com.tiendatwo.TiendatwoApplication</star-class>
     </properties>
     <dependencies>
         <dependency>
