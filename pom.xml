@@ -117,6 +117,12 @@
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity6</artifactId>
         </dependency> 
+        <dependency>
+            <!-- semana 11 esto le agragamos al pom :) -->
+            <!--practicar el pom ;)-->
+            <groupId>org.springframework.boot</groupId> 
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
 
     </dependencies>
         
