@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+
 @Service
 public class UsuarioService {
 
@@ -34,6 +35,11 @@ public class UsuarioService {
     @Transactional(readOnly = true)
     public List<Usuario> getUsuarios(boolean activo) {
         if (activo) {
+            
+            // tenemos diferentes metodos que nos permiten conectarnoc 
+            // con el repositorio y nos va permitir registrar un usuario nuevo
+            // verificar si el usuario existe
+            
             return usuarioRepository.findByActivoTrue();
         }
         return usuarioRepository.findAll();
@@ -68,6 +74,7 @@ public class UsuarioService {
     }
 // se ha utilizado en usuario y categoria 
    // no dejar campos en blanco 
+    // almacena la informacion en la base de datos 
     @Transactional
     public void save(Usuario usuario, MultipartFile imagenFile, boolean encriptaClave) {
         // Verificar si el correo ya existe, excluyendo el usuario actual        

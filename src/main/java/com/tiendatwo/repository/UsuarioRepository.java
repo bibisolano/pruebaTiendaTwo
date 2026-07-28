@@ -15,16 +15,23 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     
     
     // segunda parte del usuario repository semmana #11
+    
+    // busca que el usuario este activo
     public Optional<Usuario> findByUsernameAndActivoTrue(String username);
-
+    
+    //busca todos los activos 
     public List<Usuario> findByActivoTrue();
-
+    
+    //busca por nombre de usernamr
     public Optional<Usuario> findByUsername(String username);
-
+    
+    //busca por usuario password
     public Optional<Usuario> findByUsernameAndPassword(String username, String Password);
-
+    
+    //busca por usuuario correo 
     public Optional<Usuario> findByUsernameOrCorreo(String username, String correo);
-
+    
+    // verifica que exista el usuario con los parametros que tenga 
     public boolean existsByUsernameOrCorreo(String username, String correo);
 
    // terminar de explicar el codigo :)

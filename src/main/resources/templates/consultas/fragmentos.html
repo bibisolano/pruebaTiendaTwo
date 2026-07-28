@@ -48,15 +48,21 @@
                                 <span th:if="${p.existencias > 0}" class="badge text-bg-success ms-2" th:text="${p.existencias} + ' unidades'"></span>
                                 <span th:unless="${p.existencias > 0}" class="badge text-bg-danger ms-2">Agotado</span>
                             </div>
-                            <form th:action="@{/carrito/agregar}" th:method="POST" class="d-inline">
+                            
+                            <!-- modificacion semana #12 -->
+           
+                            <form th:action="@{/carrito/agregar}" th:method="POST" class="d-inline"> 
+                                <!-- la linea del input agrgarla al proyecto -->
                                 <input type="hidden" th:value="${p.idProducto}" name="idProducto"/>
-                                <button type="submit" 
+                                <button type="button" 
                                         class="btn btn-sm btn-primary" 
                                         th:disabled="${p.existencias == 0}"
-                                        onclick="addCart(this.form)">
+                                        
+                                        onclick="addCart(this.form)">   <!--el onclick viaja hacia el javascript  -->
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </form>
+                            
                         </div>
                     </div>
                 </div>
