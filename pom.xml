@@ -30,6 +30,7 @@
         <java.version>25</java.version>
         <maven.compiler.relace>25</maven.compiler.relace>
         <star-class>com.tiendatwo.TiendatwoApplication</star-class>
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
     <dependencies>
         <dependency>
@@ -175,6 +176,11 @@
                         </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-Xlint</arg>
+                    </compilerArgs>
+                </configuration>
             </plugin>
         </plugins>
     </build>
